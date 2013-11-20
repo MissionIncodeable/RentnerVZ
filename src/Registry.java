@@ -1,29 +1,23 @@
 
 public class Registry {
 	
-	public Registry (Userlist _RegistryUserList){
-		this.RegistryUserList = _RegistryUserList;              //Konstruktor mit übergebener Userliste
+	public Registry (Userlist _RegistryUserList){							// Konstruktor mit interner Nutzerliste
+		this.RegistryUserList = _RegistryUserList;              			
 	}
 	
 	public void RegNewUser (String _FirstName, String _LastName, String _Username, String _Email, String _Password){
-		User NewUser = new User();                              // Registriere neuen User
-		NewUser.FirstName = _FirstName;
-		NewUser.LastName = _LastName;
-		NewUser.Username = _Username;
-		NewUser.Email = _Email;
-		NewUser.Password = _Password;
-		this.RegistryUserList.getNewUserlist().add(NewUser);   // schreibe neuen User in übergebene Userliste
+		User NewUser = new User(_FirstName, _LastName, _Username, _Email, _Password);        // Registriere neuen User
+		this.RegistryUserList.getMyUserlist().add(NewUser);					// schreibe neuen User in übergebene Userliste
 	}
 
 
-    public Userlist getNewUserList() {
+    public Userlist getRegistryUserList() {									// Getter f�r Nutzerliste der Registry
         return RegistryUserList;
     }
-
-    public void setNewUserList(Userlist newUserList) {
-       RegistryUserList = newUserList;
+    public void setRegistryUserList(Userlist newUserList) {					// Setze Userliste der Registry
+       this.RegistryUserList = newUserList;
     }
 
-    private Userlist RegistryUserList;                           // interne Userliste der Registry
+    private Userlist RegistryUserList;                           			// interne Userliste der Registry
 }
 
