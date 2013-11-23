@@ -2,12 +2,12 @@
 public class User {
 	public User (String _FirstName, String _LastName, String _Username, String _Email, String _Password)
 	{
-		this.Age = 68;
-		this.FirstName = _FirstName;
-		this.LastName =  _LastName;
-		this.Username = _Username;
-		this.Email = _Email;
-		this.Password = _Password;
+		this.Age 		= 68;
+		this.FirstName 	= _FirstName;
+		this.LastName 	=  _LastName;
+		this.Username 	= _Username;
+		this.Email 		= _Email;
+		this.Password 	= _Password;
 	}
 
     public void setFirstName(String _FirstName) {                    // Get+Set Vorname
